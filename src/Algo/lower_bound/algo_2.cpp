@@ -1,11 +1,14 @@
-// アルゴ式：方程式を解く
+// アルゴ式：貯金(1)
 #include <iostream>
 using namespace std;
 int N;
+int M;
 double low = 0;
-double high = 50.0;
+double high = 10.0;
 int isValid(double x) {
-    if (x * (x * (x + 1) + 2) + 3 < N)
+    double res = N + 1.0;
+    for (int i = 1; i <= 5; i++) res = res * x + 1.0;
+    if (res < M)
         return 1;
     else
         return 0;
@@ -22,7 +25,7 @@ double binary_serch() {
     return mid;
 }
 int main(void) {
-    cin >> N;
+    cin >> N >> M;
+
     cout << binary_serch() << endl;
-    return 0;
 }
