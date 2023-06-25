@@ -14,4 +14,11 @@ inline bool chmin(T& a, T b) {
     }
     return false;
 }
-int main(void) {}
+int main(void) {
+    int N, Ax, Ay, Bx, By;
+    cin >> N >> Ax >> Ay >> Bx >> By;
+    vector<string> S(N);
+    for (int i = 0; i < N; i++) cin >> S[i];
+    vector<vector<vector<int>>> dp(N,
+                                   vector<vector<int>>(N, vector<int>(4, INF)));
+}

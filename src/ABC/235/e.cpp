@@ -1,8 +1,10 @@
-// ABC235Eの問題
-#include <algorithm>
-#include <iostream>
-#include <vector>
+// AtCoder ABC 235 E - MST + 1 (水色, 500 点)
+#include<iostream>
+#include<vector>
+#include<algorithm>
 using namespace std;
+#define rep(i, n) for (int i = 0; i < (n); ++i)
+
 struct UnionFind {
     vector<int> par;
     UnionFind() {}
@@ -32,6 +34,7 @@ struct Edge {
     Edge(int x, int y, int w, int id) : x(x), y(y), w(w), id(id) {}
     inline bool operator<(const Edge& e) const { return w < e.w; }
 };
+
 int main(void) {
     int N, M, Q;
     cin >> N >> M >> Q;
